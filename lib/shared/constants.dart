@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
 
-class Constants {
-  static final Color primaryColor = Colors.blue.shade900;
-  static final Color accentColor = Colors.amber.shade600;
-}
+final Color primaryColor = Color(0xFF040431);
+final Color accentColor = Colors.amber.shade600;

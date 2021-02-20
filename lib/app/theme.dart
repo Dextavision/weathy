@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:weathy/shared/constants.dart';
 
 class AppTheme {
-  static final _primaryColor = Colors.blue.shade900;
-  static final _accentColor = Colors.amber.shade600;
+  static final _primaryColor = primaryColor;
+  static final _accentColor = accentColor;
 
   static ThemeData light() {
     final textTheme = _getTextTheme(brightness: Brightness.light);
@@ -20,12 +21,12 @@ class AppTheme {
     final textTheme = _getTextTheme(brightness: Brightness.dark);
 
     return ThemeData(
-      brightness: Brightness.dark,
-      primaryColor: _primaryColor,
-      accentColor: _accentColor,
-      textTheme: textTheme,
-      primaryTextTheme: textTheme,
-    );
+        brightness: Brightness.dark,
+        primaryColor: _primaryColor,
+        accentColor: _accentColor,
+        textTheme: textTheme,
+        primaryTextTheme: textTheme,
+        scaffoldBackgroundColor: Color(0xFF1b1b29));
   }
 
   static _getTextTheme({@required Brightness brightness}) {
