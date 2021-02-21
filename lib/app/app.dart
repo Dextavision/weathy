@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:weathy/app/theme.dart';
-import 'package:weathy/home/home_screen.dart';
+import 'package:weathy/view/home/home_screen.dart';
 
 class Weathy extends StatelessWidget {
   @override

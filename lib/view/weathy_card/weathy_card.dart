@@ -13,6 +13,13 @@ class WeathyCard extends StatelessWidget {
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(10.0),
           color: cardColor,
+          boxShadow: [
+            BoxShadow(
+              color: accentColor,
+              blurRadius: 3,
+              spreadRadius: 2,
+            ),
+          ],
         ),
         child: Column(
           children: [
@@ -56,11 +63,10 @@ class WeathyCard extends StatelessWidget {
                       Icon(
                         Icons.wb_sunny_outlined,
                         color: Colors.yellow,
-                        size: 90.0,
+                        size: 160.0,
                       ),
                       Text(
                         'Sunny',
-                        style: TextStyle(color: Colors.grey),
                       )
                     ],
                   ),

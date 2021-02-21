@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:weathy/weathy_card/weathy_card.dart';
+import 'package:weathy/view/home/home_header.dart';
+import 'package:weathy/view/weathy_card/weathy_card.dart';
 
 class HomeScreen extends StatelessWidget {
   @override
@@ -11,9 +12,10 @@ class HomeScreen extends StatelessWidget {
       body: Column(
         children: [
           Expanded(
-            child: Text('Header Geo Location'),
+            child: HomeHeader(),
           ),
           Expanded(
+            flex: 2,
             child: WeathyCard(),
           ),
           Expanded(child: Text('Forecast')),
