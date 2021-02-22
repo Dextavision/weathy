@@ -46,7 +46,9 @@ class WeathyCard extends StatelessWidget {
                   padding: const EdgeInsets.fromLTRB(0, 10.0, 10.0, 0),
                   child: Container(
                     child: Text(
-                      '14:05',
+                      DateTime.now().hour.toString() +
+                          ":" +
+                          DateTime.now().minute.toString(),
                       style: cardTextStyle,
                     ),
                   ),

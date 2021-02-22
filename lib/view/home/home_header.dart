@@ -10,6 +10,7 @@ class HomeHeader extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
+        // TODO: Greetings based on daytime
         const Text(
           'Good Morning',
           style: TextStyle(fontSize: 40.0),
@@ -29,6 +30,9 @@ class HomeHeader extends StatelessWidget {
             helperText: 'Search for a city',
             border: const OutlineInputBorder(),
           ),
+          onChanged: (String text) {
+            print(text);
+          },
         ),
       ],
     );
