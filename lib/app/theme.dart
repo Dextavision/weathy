@@ -26,7 +26,7 @@ class AppTheme {
         accentColor: _accentColor,
         textTheme: textTheme,
         primaryTextTheme: textTheme,
-        scaffoldBackgroundColor: Color(0xFF1b1b29));
+        scaffoldBackgroundColor: Color(0xFF1D1E33));
   }
 
   static _getTextTheme({@required Brightness brightness}) {

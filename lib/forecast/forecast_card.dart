@@ -18,8 +18,8 @@ class ForecastCard extends StatelessWidget {
           boxShadow: [
             BoxShadow(
               color: accentColor,
-              blurRadius: 3,
-              spreadRadius: 2,
+              blurRadius: 1,
+              spreadRadius: 1,
             ),
           ],
         ),
