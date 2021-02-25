@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:weather_icons/weather_icons.dart';
 import 'package:weathy/shared/constants.dart';
 
 class ForecastCard extends StatelessWidget {
@@ -25,10 +26,10 @@ class ForecastCard extends StatelessWidget {
         ),
         child: Column(
           children: [
-            Icon(
-              Icons.wb_sunny_outlined,
+            BoxedIcon(
+              WeatherIcons.day_rain,
               color: Colors.yellow,
-              size: 80.0,
+              size: 50.0,
             ),
             Text(
               'Sunny',

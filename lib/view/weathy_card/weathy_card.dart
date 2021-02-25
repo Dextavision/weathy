@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:weather_icons/weather_icons.dart';
 import 'package:weathy/shared/constants.dart';
 
 final Color cardColor = primaryColor;
@@ -62,10 +63,10 @@ class WeathyCard extends StatelessWidget {
                   Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Icon(
-                        Icons.wb_sunny_outlined,
+                      BoxedIcon(
+                        WeatherIcons.day_sunny,
                         color: Colors.yellow,
-                        size: 160.0,
+                        size: 130.0,
                       ),
                       Text(
                         'Sunny',
@@ -84,7 +85,10 @@ class WeathyCard extends StatelessWidget {
                     children: [
                       Row(
                         children: [
-                          Icon(Icons.ac_unit, color: Colors.grey.shade700),
+                          BoxedIcon(
+                            WeatherIcons.wind,
+                            color: Colors.grey.shade700,
+                          ),
                           Text(
                             'km/h',
                             style: cardTextStyle,
@@ -93,19 +97,24 @@ class WeathyCard extends StatelessWidget {
                       ),
                       Row(
                         children: [
-                          Icon(Icons.ac_unit, color: Colors.grey.shade700),
+                          BoxedIcon(
+                            WeatherIcons.day_sunny,
+                            color: Colors.grey.shade700,
+                          ),
                           Text(
-                            'km/h',
+                            '0h',
                             style: cardTextStyle,
                           ),
                         ],
                       ),
                       Row(
                         children: [
-                          Icon(Icons.wb_sunny_outlined,
-                              color: Colors.grey.shade700),
+                          BoxedIcon(
+                            WeatherIcons.raindrops,
+                            color: Colors.grey.shade700,
+                          ),
                           Text(
-                            'km/h',
+                            '0%',
                             style: cardTextStyle,
                           ),
                         ],
