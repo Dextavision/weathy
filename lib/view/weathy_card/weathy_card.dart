@@ -80,7 +80,7 @@ class WeathyCard extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Padding(
-                  padding: const EdgeInsets.fromLTRB(10.0, 10.0, 0, 10.0),
+                  padding: const EdgeInsets.fromLTRB(10.0, 10.0, 10.0, 10.0),
                   child: Column(
                     children: [
                       Row(
@@ -90,7 +90,7 @@ class WeathyCard extends StatelessWidget {
                             color: Colors.grey.shade700,
                           ),
                           Text(
-                            'km/h',
+                            '10 km/h',
                             style: cardTextStyle,
                           ),
                         ],
@@ -102,7 +102,7 @@ class WeathyCard extends StatelessWidget {
                             color: Colors.grey.shade700,
                           ),
                           Text(
-                            '0h',
+                            '16 h',
                             style: cardTextStyle,
                           ),
                         ],
@@ -114,7 +114,7 @@ class WeathyCard extends StatelessWidget {
                             color: Colors.grey.shade700,
                           ),
                           Text(
-                            '0%',
+                            '100%',
                             style: cardTextStyle,
                           ),
                         ],

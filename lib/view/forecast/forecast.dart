@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:weathy/forecast/forecast_card.dart';
+import 'package:weathy/view/forecast/forecast_card.dart';
 
 class Forecast extends StatelessWidget {
   @override

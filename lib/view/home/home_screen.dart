@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:weathy/forecast/forecast.dart';
+import 'package:weathy/view/forecast/forecast.dart';
 import 'package:weathy/view/home/home_header.dart';
 import 'package:weathy/view/weathy_card/weathy_card.dart';
 
