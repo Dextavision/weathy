@@ -82,6 +82,7 @@ class WeathyCard extends StatelessWidget {
                 Padding(
                   padding: const EdgeInsets.fromLTRB(10.0, 10.0, 10.0, 10.0),
                   child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Row(
                         children: [
@@ -114,7 +115,7 @@ class WeathyCard extends StatelessWidget {
                             color: Colors.grey.shade700,
                           ),
                           Text(
-                            '100%',
+                            '0 %',
                             style: cardTextStyle,
                           ),
                         ],

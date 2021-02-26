@@ -25,6 +25,7 @@ class ForecastCard extends StatelessWidget {
           ],
         ),
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             BoxedIcon(
               WeatherIcons.day_rain,
