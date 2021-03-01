@@ -23,3 +23,4 @@ doc/api/
 # Custom
 .flutter-plugins
 .flutter-plugins-dependencies
+/lib/weather_api.dart

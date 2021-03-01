@@ -1,6 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:weathy/app/app.dart';
+import 'package:weathy/app/backend.dart';
 
 void main() {
-  runApp(Weathy());
+  final backend = Backend();
+
+  runApp(Weathy(
+    backend: backend,
+  ));
 }
