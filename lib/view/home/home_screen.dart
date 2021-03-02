@@ -24,6 +24,7 @@ class HomeScreen extends StatelessWidget {
               child: CircularProgressIndicator(),
             );
           } else {
+            final currentWeather = snapshot.data;
             return Column(
               children: [
                 Expanded(
@@ -33,7 +34,9 @@ class HomeScreen extends StatelessWidget {
                   flex: 2,
                   child: Padding(
                     padding: const EdgeInsets.fromLTRB(0, 0, 0, 20.0),
-                    child: WeathyCard(),
+                    child: WeathyCard(
+                      currentWeather: currentWeather,
+                    ),
                   ),
                 ),
                 Expanded(

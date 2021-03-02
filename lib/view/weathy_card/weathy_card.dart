@@ -1,11 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:weather_icons/weather_icons.dart';
+import 'package:weathy/app/backend.dart';
 import 'package:weathy/shared/constants.dart';
 
 final Color cardColor = primaryColor;
 const TextStyle cardTextStyle = TextStyle(color: Colors.white);
 
 class WeathyCard extends StatelessWidget {
+  final CurrentWeather currentWeather;
+
+  WeathyCard({@required this.currentWeather});
+
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -32,7 +37,7 @@ class WeathyCard extends StatelessWidget {
                   padding: const EdgeInsets.fromLTRB(10.0, 10.0, 0, 0),
                   child: Container(
                     child: Text(
-                      'Erftstadt',
+                      this.currentWeather.location,
                       style: TextStyle(
                         color: Colors.white,
                       ),
@@ -68,9 +73,7 @@ class WeathyCard extends StatelessWidget {
                         color: Colors.yellow,
                         size: 130.0,
                       ),
-                      Text(
-                        'Sunny',
-                      )
+                      Text(this.currentWeather.weather)
                     ],
                   ),
                 ],
@@ -91,7 +94,8 @@ class WeathyCard extends StatelessWidget {
                             color: Colors.grey.shade700,
                           ),
                           Text(
-                            '10 km/h',
+                            this.currentWeather.windSpeed.toStringAsFixed(0) +
+                                ' km/h',
                             style: cardTextStyle,
                           ),
                         ],
@@ -99,11 +103,12 @@ class WeathyCard extends StatelessWidget {
                       Row(
                         children: [
                           BoxedIcon(
-                            WeatherIcons.day_sunny,
+                            WeatherIcons.thermometer_exterior,
                             color: Colors.grey.shade700,
                           ),
                           Text(
-                            '16 h',
+                            this.currentWeather.minTemp.toStringAsFixed(0) +
+                                '°',
                             style: cardTextStyle,
                           ),
                         ],
@@ -111,11 +116,12 @@ class WeathyCard extends StatelessWidget {
                       Row(
                         children: [
                           BoxedIcon(
-                            WeatherIcons.raindrops,
+                            WeatherIcons.hot,
                             color: Colors.grey.shade700,
                           ),
                           Text(
-                            '0 %',
+                            this.currentWeather.maxTemp.toStringAsFixed(0) +
+                                '°',
                             style: cardTextStyle,
                           ),
                         ],
@@ -129,7 +135,7 @@ class WeathyCard extends StatelessWidget {
                       padding: const EdgeInsets.fromLTRB(0, 10.0, 10.0, 0),
                       child: Container(
                         child: Text(
-                          '16°',
+                          this.currentWeather.celcius.toStringAsFixed(0) + '°',
                           style: TextStyle(fontSize: 50.0, color: Colors.white),
                         ),
                       ),
