@@ -40,7 +40,24 @@ class HomeScreen extends StatelessWidget {
                   ),
                 ),
                 Expanded(
-                  child: Forecast(),
+                  child: FutureBuilder(
+                      future: context.read<Backend>().getForecastWeather(),
+                      builder: (context, snapshot) {
+                        if (snapshot.hasError) {
+                          return const Center(
+                            child: Text('An error occurred.'),
+                          );
+                        } else if (!snapshot.hasData) {
+                          return const Center(
+                            child: CircularProgressIndicator(),
+                          );
+                        } else {
+                          final forecastWeather = snapshot.data;
+                          return Forecast(
+                            forecastWeather: forecastWeather,
+                          );
+                        }
+                      }),
                 ),
               ],
             );

@@ -19,6 +19,21 @@ class Backend {
     );
     return currWeather;
   }
+
+  Future<List<ForecastWeather>> getForecastWeather() async {
+    List<Weather> response = await wf.fiveDayForecastByCityName("erftstadt");
+
+    final List<ForecastWeather> forecastWeather = response
+        .map(
+          (day) => ForecastWeather(
+            celcius: day.temperature.celsius,
+            weather: day.weatherMain,
+          ),
+        )
+        .toList();
+
+    return forecastWeather;
+  }
 }
 
 class CurrentWeather {
@@ -37,4 +52,11 @@ class CurrentWeather {
     this.minTemp,
     this.maxTemp,
   });
+}
+
+class ForecastWeather {
+  final double celcius;
+  final String weather;
+
+  const ForecastWeather({this.celcius, this.weather});
 }
