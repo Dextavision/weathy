@@ -1,4 +1,6 @@
+import 'package:flutter/material.dart';
 import 'package:weather/weather.dart';
+import 'package:weather_icons/weather_icons.dart';
 import 'package:weathy/weather_api.dart';
 
 class Backend {
@@ -59,4 +61,28 @@ class ForecastWeather {
   final String weather;
 
   const ForecastWeather({this.celcius, this.weather});
+}
+
+class WeatherIcon {
+  static IconData transformAndGetIcon(String weather) {
+    switch (weather) {
+      case "Clear":
+        return WeatherIcons.day_sunny;
+        break;
+      case "Rain":
+        return WeatherIcons.rain;
+        break;
+      case "Clouds":
+        return WeatherIcons.cloudy;
+        break;
+      case "Snow":
+        return WeatherIcons.snow;
+        break;
+      case "Extreme":
+        return WeatherIcons.hurricane_warning;
+        break;
+      default:
+        return WeatherIcons.cloud;
+    }
+  }
 }

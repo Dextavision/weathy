@@ -12,9 +12,21 @@ class Forecast extends StatelessWidget {
     return SafeArea(
       child: Row(
         children: <Expanded>[
-          Expanded(child: ForecastCard()),
-          Expanded(child: ForecastCard()),
-          Expanded(child: ForecastCard()),
+          Expanded(
+            child: ForecastCard(
+              forecastWeather: this.forecastWeather[8],
+            ),
+          ),
+          Expanded(
+            child: ForecastCard(
+              forecastWeather: this.forecastWeather[16],
+            ),
+          ),
+          Expanded(
+            child: ForecastCard(
+              forecastWeather: this.forecastWeather[24],
+            ),
+          ),
         ],
       ),
     );

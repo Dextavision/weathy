@@ -69,7 +69,8 @@ class WeathyCard extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       BoxedIcon(
-                        WeatherIcons.day_sunny,
+                        WeatherIcon.transformAndGetIcon(
+                            this.currentWeather.weather),
                         color: Colors.yellow,
                         size: 130.0,
                       ),

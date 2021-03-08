@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:weather_icons/weather_icons.dart';
+import 'package:weathy/app/backend.dart';
 import 'package:weathy/shared/constants.dart';
 
 class ForecastCard extends StatelessWidget {
-  final IconData weatherIcon = Icons.ac_unit_outlined;
-  final String weatherTitle = "";
-  final int degree = 0;
+  final ForecastWeather forecastWeather;
+
+  ForecastCard({@required this.forecastWeather});
 
   @override
   Widget build(BuildContext context) {
@@ -28,15 +29,15 @@ class ForecastCard extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             BoxedIcon(
-              WeatherIcons.day_rain,
+              WeatherIcon.transformAndGetIcon(this.forecastWeather.weather),
               color: Colors.yellow,
               size: 50.0,
             ),
             Text(
-              'Sunny',
+              this.forecastWeather.weather,
             ),
             Text(
-              '24°',
+              this.forecastWeather.celcius.toStringAsFixed(0) + '°',
             ),
           ],
         ),
