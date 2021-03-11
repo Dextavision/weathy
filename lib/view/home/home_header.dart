@@ -9,30 +9,18 @@ class HomeHeader extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
+      mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        // TODO: Greetings based on daytime
         const Text(
           'Good Morning',
           style: TextStyle(fontSize: 40.0),
         ),
-        Text(this._currentDay +
-            ' ' +
-            this._currentMonth +
-            ', ' +
-            this._currentWeekDay),
-        SizedBox(
-          height: 20.0,
-        ),
-        TextField(
-          decoration: InputDecoration(
-            icon: Icon(Icons.send),
-            hintText: 'Location',
-            helperText: 'Search for a city',
-            border: const OutlineInputBorder(),
-          ),
-          onChanged: (String text) {
-            print(text);
-          },
+        Text(
+          this._currentDay +
+              ' ' +
+              this._currentMonth +
+              ', ' +
+              this._currentWeekDay,
         ),
       ],
     );

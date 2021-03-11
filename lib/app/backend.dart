@@ -9,10 +9,10 @@ class Backend {
   WeatherFactory wf = new WeatherFactory(WeatherAPI.getAPIKey());
 
   Future<CurrentWeather> getCurrentWeather() async {
-    Weather response = await wf.currentWeatherByCityName("erftstadt");
+    Weather response = await wf.currentWeatherByCityName("cologne");
 
     final CurrentWeather currWeather = CurrentWeather(
-      location: "Erftstadt",
+      location: "Cologne",
       celcius: response.temperature.celsius,
       weather: response.weatherMain,
       windSpeed: response.windSpeed,
@@ -23,7 +23,7 @@ class Backend {
   }
 
   Future<List<ForecastWeather>> getForecastWeather() async {
-    List<Weather> response = await wf.fiveDayForecastByCityName("erftstadt");
+    List<Weather> response = await wf.fiveDayForecastByCityName("cologne");
 
     final List<ForecastWeather> forecastWeather = response
         .map(
